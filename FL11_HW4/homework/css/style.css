@@ -169,6 +169,7 @@ body {
     background-position: center;    
     position: relative;
     min-height: 30rem;
+    border: 1px solid #ffffff;
 }
 #fi1 {
     background-image: url(../img/sample-1.jpg);
