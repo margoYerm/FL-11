@@ -203,6 +203,10 @@ body {
 .news-item:last-of-type {
     margin-right: 0;
 }
+.news-item a {
+    text-align: center;
+    text-decoration: none;
+}
 #nl1 {
     background-image: url(../img/news-list-1.jpg);
 }
