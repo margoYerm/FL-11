@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    background-color: #0b192f;
+    font-size: 10px;
+    padding-bottom: 3px;
+}
+body {
+    font-family: roboto;    
+    max-width: 1400px;
+    margin: 0 auto;  
+    padding: 0 1.5rem;
+}
+header, footer {
+    background-color: #162b4d;
+}
+p {
+    font-size: 1.6rem;
+    line-height: 1.5;    
+}
+.wrapper-page {
+    display: grid;    
+    grid-template-areas: "header header" "main aside" "footer footer";
+    grid-template-columns: 10.4fr 3.3fr;
+    grid-gap: 25px;
+}
+.header {
+    grid-area: header;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0 7.5rem 0 2.5rem;
+}
+.header .logo {
+    font-size: 4.5rem;
+    font-weight: 100;    
+}
+.header .icon-menu {
+    background: none;
+    color: #ffffff;
+    border: none;
+    font-size: 2rem;
+    display: none;
+}
+.header .logo span {
+    color: #b71757;
+}
+.header-menu a {
+    font-size: 2.2rem;
+    font-weight: 300;
+    text-decoration: none;
+    color: #ffffff;
+    display: inline-block;
+    padding: 5rem 2.5rem;
+    transition: background-color 0.5s linear;
+}
+.header-menu a:hover {
+    background-color: #283d5f;
+}
+.main {
+    grid-area: main;
+    padding-bottom: 0;
+    box-sizing: border-box;
+}
+.travel-item {
+    display: flex; 
+    box-sizing: border-box;    
+}
+.travel-photo,
+.travel-description {
+    flex-grow: 1;
+    flex-shrink: 1;    
+    width: 50%;    
+}
+.travel-photo img {
+    width: 100%;    
+    height: 100%;
+    cursor: pointer;
+    transition: opacity 1s linear;
+}
+.travel-photo:hover img {    
+    opacity: 0.5;    
+}
+.travel-description {
+    color: rgba(255,255,255,1);
+    box-sizing: border-box;
+    padding: 4.5rem 8rem 0 4rem;
+    position: relative;
+}
+.travel-header {
+    font-size: 6rem;
+    font-weight: 100;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #ffffff;
+    display: inline-block;
+    margin-bottom: 10%;
+    width: 90%;
+}
+.travel-header:hover {
+    transition: color 0.5s linear;
+    color: rgba(255,255,255,0.5);    
+}
+.travel-description p {
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 2rem;    
+}
+.travel-date {
+    position: absolute;
+    display: inline-block;
+    width: 30%;
+    top: 2rem;
+    right: 1rem;
+    text-align: right;
+    font-size: 5rem;
+    font-weight: 100;
+    line-height: 0.85;
+}
+.travel-date span {
+    font-size: 2.5rem;
+    text-align: center;
+}
+.travel-item:nth-of-type(even) .travel-description {
+    order: -1;
+    text-align: right;
+    padding: 4.5rem 4rem 0 8rem;
+}
+.travel-item:nth-of-type(even) .travel-date {
+    left: 1rem;
+    text-align: left;
+}
+.post-1 {
+	background: #B71757;
+}
+.post-2 {
+	background: #0D7E71;
+}
+.post-3 {
+	background: #b1660e;
+}
+.post-4 {
+	background: #d12767;
+}
+.post-5 {
+	background: #2d95bb;
+}
+.post-5 .travel-header {
+    margin-bottom: 2%;
+}
+.news {
+    grid-area: aside;
+    background: transparent;
+}
+.news-item {
+    background-color: #ffffff;
+    margin-bottom: 25px;
+    padding-bottom: 2rem;
+}
+.news-item img {
+    width: 100%; 
+    transition: opacity 0.5s linear;
+}
+.news-item img:hover {
+    opacity: 0.8; 
+    cursor: pointer;
+}
+.news-item a {
+    box-sizing: border-box;
+    font-size: 2.4rem;
+    font-weight: 300;
+    color: #000000;
+    text-decoration: none;
+    text-align: left;
+    display: inline-block;
+    margin: 3rem 2rem 0 2rem;
+}
+.news-item a:hover {
+    transition: color 0.5s linear;
+    color: rgba(0, 0, 0, 0.6);
+}
+.news-item p {    
+    color: rgba(0, 0, 0, 0.6);
+    box-sizing: border-box;
+    margin: 1rem 2rem 0 2rem;
+}
+.footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    font-size: 1.4rem;
+    color: rgba(255,255,255,0.3);
+    padding: 3rem;
+}
+.footer a {
+    text-decoration: none;
+    color: inherit;
+}
+@media screen and (max-width: 768px) {
+    body {padding: 0 0.5rem;}
+    .wrapper-page {        
+        grid-template-columns: 5.5fr 3.7fr;
+        grid-gap: 25px;
+    }
+    .header {
+        flex-direction: column;
+    }
+    .header .icon-menu {
+        display: block;
+        margin-top: 2rem;
+    }
+    nav.header-menu {
+        display: none;
+    }
+    .header .logo {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+    .travel-item {
+        flex-wrap: wrap;
+    }
+    .travel-photo,
+    .travel-description {     
+        width: 100%;    
+    }
+    .travel-description {
+        padding: 3rem 4rem 0 4rem;
+    }
+    .travel-item:nth-of-type(even) .travel-description {
+        order: 1;
+        text-align: left;
+        padding: 3rem 4rem 0 4rem;
+    }
+    .travel-header {
+        margin-bottom: 5%;
+        font-size: 4rem;
+    }
+    .travel-date {        
+        position: static;
+        display: block;
+        text-align: center;
+        margin: 2rem auto 1rem auto;
+    }
+    .travel-item:nth-of-type(even) .travel-date {
+        text-align: center;
+    }
+    .footer {        
+        display: flex;
+        flex-direction: column;        
+        align-content: center;         
+    }
+    .footer p {
+        text-align: center;
+    }    
+}    
+@media screen and (max-width: 480px) {
+    .wrapper-page {
+        grid-template-areas: "header" "main" "aside" "footer";
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+    }
+    .header {
+        margin-bottom: 2rem;
+    }    
+    .travel-photo:hover img {    
+        opacity: 1;
+        cursor: default;
+    }
+    .travel-header:hover {        
+        color: rgba(255,255,255,1);
+        cursor: default;
+    }    
+    .news-item img:hover {
+        opacity: 1; 
+        cursor: default;
+    }
+    .news-item a:hover {    
+        color: rgba(0, 0, 0, 1);
+        cursor: default;
+    }    
+}
