@@ -165,7 +165,9 @@ let objForTask9and10 = {
 function keys (arr) {
     let mas = [];
     for (let key in arr) {
-        mas.push(key);
+        if(arr.hasOwnProperty(key)) {
+            mas.push(key);
+        }        
     }
     return mas;
 }
@@ -174,8 +176,10 @@ let t9 = keys(objForTask9and10);
 //Task 10
 function values (arr) {
     let mas = [];
-    for (let key in arr) {        
-        mas.push(arr[key]);
+    for (let key in arr) {
+        if (arr.hasOwnProperty(key)) {
+            mas.push(arr[key]);
+        }        
     }
     return mas;
 }
